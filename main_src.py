@@ -174,7 +174,7 @@ def msc(m):
  t=bd[j]
  s=0
  if t != '.':
-  s=10*V[t.upper()] - V[bd[i].upper()]
+  s=12*V[t.upper()] - V[bd[i].upper()]
  if pr and pr != 'e':
   s += V[pr]
  return s
@@ -292,7 +292,7 @@ def po(pt,by):
    return json.load(res)
  except He as e:
   Q(f"{pt}: HTTP {e.code} {e.read().decode(errors='replace')}")
-CAP=24000
+CAP=25000
 def main():
  while True:
   g=po("/game",{})
